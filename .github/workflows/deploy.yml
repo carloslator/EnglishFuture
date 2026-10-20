@@ -20,7 +20,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy_to_pages.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -32,9 +32,9 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
-      - name: Build project
+      - name: Build project with Vite
         run: npm run build
 
       - name: Setup Pages
@@ -46,5 +46,5 @@ jobs:
           path: './dist'
 
       - name: Deploy to GitHub Pages
-        id: deployment
+        id: deploy_to_pages
         uses: actions/deploy-pages@v4
