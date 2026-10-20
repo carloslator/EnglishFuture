@@ -1,0 +1,6 @@
+{
+  "name": "FUTURO - English Future Tenses for Spanish Speakers",
+  "description": "Herramienta educativa concisa, elegante y didáctica para hispanohablantes sobre los tiempos futuros en inglés, fundamentada en la gramática de Renaat Declerck.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
